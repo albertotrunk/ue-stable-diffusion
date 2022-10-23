@@ -233,6 +233,8 @@ if opt.seed == None:
 seed_everything(opt.seed)
 with unreal.ScopedSlowTask(4, "Loading weight") as slow_task3:
     slow_task3.make_dialog(True)               # Makes the dialog visible, if it isn't already
+    if slow_task3.should_cancel():         # True if the user has pressed Cancel in the UI
+        break
     sd = load_model_from_config(f"{ckpt}")
     li, lo = [], []
     for key, value in sd.items():
@@ -321,6 +323,8 @@ with torch.no_grad():
     with unreal.ScopedSlowTask(opt.n_iter, "Unreal is dreaming!") as slow_task:
         slow_task.make_dialog(True)
         for n in trange(opt.n_iter, desc="Sampling"):
+            if slow_task.should_cancel():         # True if the user has pressed Cancel in the UI
+                break
             for prompts in tqdm(data, desc="data"):
                 sample_path = outpath
                 base_count = len(unreal.EditorAssetLibrary.list_assets(sample_path))
@@ -392,7 +396,7 @@ with torch.no_grad():
 
                     del samples_ddim
                     unreal.log(f"memory_final = {torch.cuda.memory_allocated(device=opt.device) / 1e6}")
-        slow_task.enter_progress_frame(n)
+            slow_task.enter_progress_frame(n)
 
 
 del modelFS
@@ -408,3 +412,4 @@ time_taken = (toc - tic) / 60.0
 
 unreal.log(f"Samples finished in {0:.2f} minutes and exported to {sample_path}\n Seeds used {seeds[:-1]}")
 unreal.log(format(time_taken))
+exit()
