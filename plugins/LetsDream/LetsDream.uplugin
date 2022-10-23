@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "LetsDream",
+	"Description": "Stable difusion integration",
+	"Category": "AI",
+	"CreatedBy": "Alberto Cerdá",
+	"CreatedByURL": "https://github.com/albertotrunk/UE5-Dream",
+	"DocsURL": "https://github.com/albertotrunk/UE5-Dream",
+	"MarketplaceURL": "",
+	"SupportURL": "https://discord.gg/zF629XPZB7",
+	"EngineVersion": "5.0.0",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": true,
+	"Plugins": [
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "PythonFoundationPackages",
+			"Enabled": true
+		}
+	]
+}
