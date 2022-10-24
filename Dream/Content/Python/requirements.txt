@@ -1,0 +1,9 @@
+diffusers==0.4.0
+einops==0.4.1
+omegaconf==2.2.3
+pillow==9.2.0
+pytorch-lightning==1.7.7
+scipy==1.9.1
+torchvision==0.13.1
+tqdm==4.63.0
+transformers==4.22.2
