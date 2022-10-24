@@ -1,0 +1,653 @@
+import gradio
+
+XRAY_CONFIG = {
+    "version": "3.1.8b\n",
+    "mode": "blocks",
+    "dev_mode": True,
+    "components": [
+        {
+            "id": 23,
+            "type": "markdown",
+            "props": {
+                "value": "<h1>Detect Disease From Scan</h1>\n<p>With this model you can lorem ipsum</p>\n<ul>\n<li>ipsum 1</li>\n<li>ipsum 2</li>\n</ul>\n",
+                "name": "markdown",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 24,
+            "type": "checkboxgroup",
+            "props": {
+                "choices": ["Covid", "Malaria", "Lung Cancer"],
+                "value": [],
+                "label": "Disease to Scan For",
+                "show_label": True,
+                "name": "checkboxgroup",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {"id": 25, "type": "tabs", "props": {"visible": True, "style": {}}},
+        {
+            "id": 26,
+            "type": "tabitem",
+            "props": {"label": "X-ray", "visible": True, "style": {}},
+        },
+        {
+            "id": 27,
+            "type": "row",
+            "props": {
+                "type": "row",
+                "variant": "default",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 28,
+            "type": "image",
+            "props": {
+                "image_mode": "RGB",
+                "source": "upload",
+                "tool": "editor",
+                "streaming": False,
+                "mirror_webcam": True,
+                "show_label": True,
+                "name": "image",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 29,
+            "type": "json",
+            "props": {
+                "show_label": True,
+                "name": "json",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 30,
+            "type": "button",
+            "props": {
+                "value": "Run",
+                "variant": "secondary",
+                "name": "button",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 31,
+            "type": "tabitem",
+            "props": {"label": "CT Scan", "visible": True, "style": {}},
+        },
+        {
+            "id": 32,
+            "type": "row",
+            "props": {
+                "type": "row",
+                "variant": "default",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 33,
+            "type": "image",
+            "props": {
+                "image_mode": "RGB",
+                "source": "upload",
+                "tool": "editor",
+                "streaming": False,
+                "mirror_webcam": True,
+                "show_label": True,
+                "name": "image",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 34,
+            "type": "json",
+            "props": {
+                "show_label": True,
+                "name": "json",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 35,
+            "type": "button",
+            "props": {
+                "value": "Run",
+                "variant": "secondary",
+                "name": "button",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 36,
+            "type": "textbox",
+            "props": {
+                "lines": 1,
+                "max_lines": 20,
+                "value": "",
+                "show_label": True,
+                "name": "textbox",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 37,
+            "type": "form",
+            "props": {"type": "form", "visible": True, "style": {}},
+        },
+        {
+            "id": 38,
+            "type": "form",
+            "props": {"type": "form", "visible": True, "style": {}},
+        },
+    ],
+    "theme": "default",
+    "css": None,
+    "title": "Gradio",
+    "is_space": False,
+    "enable_queue": None,
+    "show_error": False,
+    "layout": {
+        "id": 22,
+        "children": [
+            {"id": 23},
+            {"id": 37, "children": [{"id": 24}]},
+            {
+                "id": 25,
+                "children": [
+                    {
+                        "id": 26,
+                        "children": [
+                            {"id": 27, "children": [{"id": 28}, {"id": 29}]},
+                            {"id": 30},
+                        ],
+                    },
+                    {
+                        "id": 31,
+                        "children": [
+                            {"id": 32, "children": [{"id": 33}, {"id": 34}]},
+                            {"id": 35},
+                        ],
+                    },
+                ],
+            },
+            {"id": 38, "children": [{"id": 36}]},
+        ],
+    },
+    "dependencies": [
+        {
+            "targets": [30],
+            "trigger": "click",
+            "inputs": [24, 28],
+            "outputs": [29],
+            "backend_fn": True,
+            "js": None,
+            "queue": None,
+            "api_name": None,
+            "scroll_to_output": False,
+            "show_progress": True,
+        },
+        {
+            "targets": [35],
+            "trigger": "click",
+            "inputs": [24, 33],
+            "outputs": [34],
+            "backend_fn": True,
+            "js": None,
+            "queue": None,
+            "api_name": None,
+            "scroll_to_output": False,
+            "show_progress": True,
+        },
+        {
+            "targets": [],
+            "trigger": "load",
+            "inputs": [],
+            "outputs": [36],
+            "backend_fn": True,
+            "js": None,
+            "queue": None,
+            "api_name": None,
+            "scroll_to_output": False,
+            "show_progress": True,
+        },
+    ],
+}
+
+XRAY_CONFIG_DIFF_IDS = {
+    "mode": "blocks",
+    "dev_mode": True,
+    "components": [
+        {
+            "id": 1,
+            "type": "markdown",
+            "props": {
+                "value": "<h1>Detect Disease From Scan</h1>\n<p>With this model you can lorem ipsum</p>\n<ul>\n<li>ipsum 1</li>\n<li>ipsum 2</li>\n</ul>\n",
+                "name": "markdown",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 22,
+            "type": "checkboxgroup",
+            "props": {
+                "choices": ["Covid", "Malaria", "Lung Cancer"],
+                "value": [],
+                "label": "Disease to Scan For",
+                "show_label": True,
+                "name": "checkboxgroup",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 3,
+            "type": "tabs",
+            "props": {
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 444,
+            "type": "tabitem",
+            "props": {
+                "label": "X-ray",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 5,
+            "type": "row",
+            "props": {
+                "type": "row",
+                "variant": "default",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 6,
+            "type": "image",
+            "props": {
+                "image_mode": "RGB",
+                "source": "upload",
+                "tool": "editor",
+                "streaming": False,
+                "mirror_webcam": True,
+                "show_label": True,
+                "name": "image",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 7,
+            "type": "json",
+            "props": {
+                "show_label": True,
+                "name": "json",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 8888,
+            "type": "button",
+            "props": {
+                "value": "Run",
+                "variant": "secondary",
+                "name": "button",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 9,
+            "type": "tabitem",
+            "props": {
+                "label": "CT Scan",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 10,
+            "type": "row",
+            "props": {
+                "type": "row",
+                "variant": "default",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 11,
+            "type": "image",
+            "props": {
+                "image_mode": "RGB",
+                "source": "upload",
+                "tool": "editor",
+                "streaming": False,
+                "mirror_webcam": True,
+                "show_label": True,
+                "name": "image",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 12,
+            "type": "json",
+            "props": {
+                "show_label": True,
+                "name": "json",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 13,
+            "type": "button",
+            "props": {
+                "value": "Run",
+                "variant": "secondary",
+                "name": "button",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 141,
+            "type": "textbox",
+            "props": {
+                "lines": 1,
+                "max_lines": 20,
+                "value": "",
+                "show_label": True,
+                "name": "textbox",
+                "visible": True,
+                "style": {},
+            },
+        },
+        {
+            "id": 37,
+            "type": "form",
+            "props": {"type": "form", "visible": True, "style": {}},
+        },
+        {
+            "id": 38,
+            "type": "form",
+            "props": {"type": "form", "visible": True, "style": {}},
+        },
+    ],
+    "theme": "default",
+    "css": None,
+    "enable_queue": False,
+    "layout": {
+        "id": 0,
+        "children": [
+            {"id": 1},
+            {"id": 37, "children": [{"id": 22}]},
+            {
+                "id": 3,
+                "children": [
+                    {
+                        "id": 444,
+                        "children": [
+                            {"id": 5, "children": [{"id": 6}, {"id": 7}]},
+                            {"id": 8888},
+                        ],
+                    },
+                    {
+                        "id": 9,
+                        "children": [
+                            {"id": 10, "children": [{"id": 11}, {"id": 12}]},
+                            {"id": 13},
+                        ],
+                    },
+                ],
+            },
+            {"id": 38, "children": [{"id": 141}]},
+        ],
+    },
+    "dependencies": [
+        {
+            "targets": [8888],
+            "trigger": "click",
+            "inputs": [22, 6],
+            "outputs": [7],
+            "backend_fn": True,
+            "js": None,
+            "queue": None,
+            "api_name": None,
+            "scroll_to_output": False,
+            "show_progress": True,
+        },
+        {
+            "targets": [13],
+            "trigger": "click",
+            "inputs": [22, 11],
+            "outputs": [12],
+            "backend_fn": True,
+            "js": None,
+            "queue": None,
+            "api_name": None,
+            "scroll_to_output": False,
+            "show_progress": True,
+        },
+        {
+            "targets": [],
+            "trigger": "load",
+            "inputs": [],
+            "outputs": [141],
+            "backend_fn": True,
+            "js": None,
+            "queue": None,
+            "api_name": None,
+            "scroll_to_output": False,
+            "show_progress": True,
+        },
+    ],
+}
+
+XRAY_CONFIG_WITH_MISTAKE = {
+    "mode": "blocks",
+    "dev_mode": True,
+    "components": [
+        {
+            "id": 1,
+            "type": "markdown",
+            "props": {
+                "value": "<h1>Detect Disease From Scan</h1>\n<p>With this model you can lorem ipsum</p>\n<ul>\n<li>ipsum 1</li>\n<li>ipsum 2</li>\n</ul>\n",
+                "name": "markdown",
+                "style": {},
+            },
+        },
+        {
+            "id": 2,
+            "type": "checkboxgroup",
+            "props": {
+                "choices": ["Covid", "Malaria", "Lung Cancer"],
+                "value": [],
+                "name": "checkboxgroup",
+                "show_label": True,
+                "label": "Disease to Scan For",
+                "style": {},
+            },
+        },
+        {
+            "id": 3,
+            "type": "tabs",
+            "props": {
+                "style": {},
+                "value": True,
+            },
+        },
+        {
+            "id": 4,
+            "type": "tabitem",
+            "props": {
+                "label": "X-ray",
+                "style": {},
+                "value": True,
+            },
+        },
+        {
+            "id": 5,
+            "type": "row",
+            "props": {"type": "row", "variant": "default", "style": {}, "value": True},
+        },
+        {
+            "id": 6,
+            "type": "image",
+            "props": {
+                "image_mode": "RGB",
+                "source": "upload",
+                "streaming": False,
+                "mirror_webcam": True,
+                "tool": "editor",
+                "name": "image",
+                "style": {},
+            },
+        },
+        {
+            "id": 7,
+            "type": "json",
+            "props": {
+                "name": "json",
+                "style": {},
+            },
+        },
+        {
+            "id": 8,
+            "type": "button",
+            "props": {
+                "value": "Run",
+                "name": "button",
+                "css": {"background-color": "red", "--hover-color": "orange"},
+                "variant": "secondary",
+            },
+        },
+        {
+            "id": 9,
+            "type": "tabitem",
+            "props": {
+                "show_label": True,
+                "label": "CT Scan",
+                "style": {},
+                "value": True,
+            },
+        },
+        {
+            "id": 10,
+            "type": "row",
+            "props": {"type": "row", "variant": "default", "style": {}, "value": True},
+        },
+        {
+            "id": 11,
+            "type": "image",
+            "props": {
+                "image_mode": "RGB",
+                "source": "upload",
+                "tool": "editor",
+                "streaming": False,
+                "mirror_webcam": True,
+                "name": "image",
+                "style": {},
+            },
+        },
+        {
+            "id": 12,
+            "type": "json",
+            "props": {
+                "name": "json",
+                "style": {},
+            },
+        },
+        {
+            "id": 13,
+            "type": "button",
+            "props": {
+                "value": "Run",
+                "name": "button",
+                "style": {},
+                "variant": "secondary",
+            },
+        },
+        {
+            "id": 14,
+            "type": "textbox",
+            "props": {
+                "lines": 1,
+                "value": "",
+                "name": "textbox",
+                "style": {},
+            },
+        },
+    ],
+    "theme": "default",
+    "layout": {
+        "id": 0,
+        "children": [
+            {"id": 1},
+            {"id": 2},
+            {
+                "id": 3,
+                "children": [
+                    {
+                        "id": 4,
+                        "children": [
+                            {"id": 5, "children": [{"id": 6}, {"id": 7}]},
+                            {"id": 8},
+                        ],
+                    },
+                    {
+                        "id": 9,
+                        "children": [
+                            {"id": 10, "children": [{"id": 12}, {"id": 11}]},
+                            {"id": 13},
+                        ],
+                    },
+                ],
+            },
+            {"id": 14},
+        ],
+    },
+    "dependencies": [
+        {
+            "targets": [8],
+            "trigger": "click",
+            "inputs": [2, 6],
+            "outputs": [7],
+            "api_name": None,
+            "scroll_to_output": False,
+            "show_progress": True,
+        },
+        {
+            "targets": [13],
+            "trigger": "click",
+            "inputs": [2, 11],
+            "outputs": [12],
+            "api_name": None,
+            "scroll_to_output": False,
+            "show_progress": True,
+        },
+    ],
+}

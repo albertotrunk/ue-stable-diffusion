@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: font-roboto
+Version: 0.0.1
+Summary: Roboto sans-serif font
+Home-page: https://github.com/pimoroni/fonts-python
+Author: Philip Howard
+Author-email: phil@pimoroni.com
+License: Apache 2.0
+Keywords: Roboto Font
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Text Processing :: Fonts
+License-File: LICENSE.txt
+
+Fonts: Roboto
+=============
+
+Roboto is a neo-grotesque sans-serif font family designed by Google for the Android mobile OS.
+
+Preview: https://fonts.google.com/specimen/Roboto
+
+Source: https://github.com/google/roboto
+
+This font has been repackaged for the Python Fonts module: https://pypi.org/project/fonts/
+0.0.1
+=====
+
+- Initial release
+

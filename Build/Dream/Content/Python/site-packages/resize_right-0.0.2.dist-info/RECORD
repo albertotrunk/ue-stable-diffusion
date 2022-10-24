@@ -1,0 +1,13 @@
+resize_right-0.0.2.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+resize_right-0.0.2.dist-info/LICENSE,sha256=6ZqX_48LNxYJkDhNlnmSpkGNww4NpHXqrv3J5TuRnP4,1070
+resize_right-0.0.2.dist-info/METADATA,sha256=wF1tSPkOXzwk5vz6z96AlSYjdhnBkCdQJCY8EM1oPGE,551
+resize_right-0.0.2.dist-info/RECORD,,
+resize_right-0.0.2.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+resize_right-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+resize_right-0.0.2.dist-info/top_level.txt,sha256=L32Z7nM5_JtCuZ6EX-6EXEdXUVwXMFXJhubSO1_O2do,13
+resize_right/__init__.py,sha256=-iHYsivM5BxtXNDFzgTpcdsgFPBwoQiSekwJZxK-uoc,98
+resize_right/__pycache__/__init__.cpython-39.pyc,,
+resize_right/__pycache__/interp_methods.cpython-39.pyc,,
+resize_right/__pycache__/resize_right.cpython-39.pyc,,
+resize_right/interp_methods.py,sha256=WQQG3n3TwQrLTs0hpENA6eKjY0xdGpiFr6j805oSFks,1716
+resize_right/resize_right.py,sha256=HBUwI-QWaieF_G3NtYvzB2YR6gewVMtkOc6aIat_g8o,19334

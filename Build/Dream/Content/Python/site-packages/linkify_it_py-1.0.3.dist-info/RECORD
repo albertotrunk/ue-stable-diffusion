@@ -1,0 +1,14 @@
+linkify_it/__init__.py,sha256=REwJ5fm-jx-M_nv7uEyoTHq8o5px6Silna0u_dMGG5M,111
+linkify_it/__pycache__/__init__.cpython-39.pyc,,
+linkify_it/__pycache__/main.cpython-39.pyc,,
+linkify_it/__pycache__/tlds.cpython-39.pyc,,
+linkify_it/__pycache__/ucre.cpython-39.pyc,,
+linkify_it/main.py,sha256=jtIL00373QmKe41xrCSl0r1UUAVWgju9pxFjqMittr8,20360
+linkify_it/tlds.py,sha256=qMiHGlrXHOQ8o_PLIo91PdlvqEk1URRq7vBpy2m-reQ,20791
+linkify_it/ucre.py,sha256=Ded71sxrPcU5RkXwry6tuYKlhIg_efjH4T8CoE9fqCk,7094
+linkify_it_py-1.0.3.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+linkify_it_py-1.0.3.dist-info/LICENSE,sha256=211x9h8PeB9QeN9LagDV08eZ-wu4K89EimiOl2Jhii4,2234
+linkify_it_py-1.0.3.dist-info/METADATA,sha256=jTV_ket0gw9tsgXnIWhoDDycRmcMIN6w_r5OxzCo9hI,7937
+linkify_it_py-1.0.3.dist-info/RECORD,,
+linkify_it_py-1.0.3.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+linkify_it_py-1.0.3.dist-info/top_level.txt,sha256=GX2cfxY-SBCSdp6rvG1YSnI4SQrTxT8tzUFHFvfiM2s,11
