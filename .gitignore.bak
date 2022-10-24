@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+#MODEL
+*.ckpt
+#copies
+*.bak
+
+#distribution
+LetsDream/
+build/
+output/
+dist/
