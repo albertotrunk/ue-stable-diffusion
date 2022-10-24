@@ -1,2 +1,0 @@
-kornia
-test
