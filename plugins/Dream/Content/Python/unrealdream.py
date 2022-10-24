@@ -233,8 +233,6 @@ if opt.seed == None:
 seed_everything(opt.seed)
 with unreal.ScopedSlowTask(4, "Loading weight") as slow_task3:
     slow_task3.make_dialog(True)               # Makes the dialog visible, if it isn't already
-    if slow_task3.should_cancel():         # True if the user has pressed Cancel in the UI
-        break
     sd = load_model_from_config(f"{ckpt}")
     li, lo = [], []
     for key, value in sd.items():

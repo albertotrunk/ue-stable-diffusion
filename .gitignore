@@ -128,7 +128,14 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-#cache
-*.pyc
 
-repositories/
+#MODEL
+*.ckpt
+#copies
+*.bak
+
+#distribution
+LetsDream/
+build/
+output/
+dist/
