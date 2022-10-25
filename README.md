@@ -16,3 +16,5 @@ required = {'Pillow == 9.2.0','einops == 0.4.1', 'omegaconf == 2.2.3'}
 ![u5sd copy](https://user-images.githubusercontent.com/8300565/197598541-de332abd-9755-45e3-b5da-2fd4a647144e.jpg)
 more info in:
 https://github.com/albertotrunk/UE5-Dream
+
+Feel free to colaborate!
