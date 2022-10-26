@@ -13,7 +13,7 @@ from tqdm import tqdm, trange
 from itertools import islice
 import time
 from pytorch_lightning import seed_everything
-from torch import autocast
+#from torch import autocast
 from contextlib import nullcontext
 from einops import rearrange, repeat
 from optimizedSD.ldm.util import instantiate_from_config
@@ -204,7 +204,7 @@ parser.add_argument(
     help="Reduces inference time on the expense of 1GB VRAM",
 )
 parser.add_argument(
-    "--precision", type=str, help="evaluate at this precision", choices=["full", "autocast"], default="autocast"
+    "--precision", type=str, help="evaluate at this precision", choices=["full", "autocast"], default="full"
 )
 parser.add_argument(
     "--format",

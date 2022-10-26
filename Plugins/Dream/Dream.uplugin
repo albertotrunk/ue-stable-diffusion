@@ -16,11 +16,11 @@
 	"Installed": false,
 	"Plugins": [
 		{
-			"Name": "PythonScriptPlugin",
+			"Name": "PythonFoundationPackages",
 			"Enabled": true
 		},
 		{
-			"Name": "PythonFoundationPackages",
+			"Name": "PythonScriptPlugin",
 			"Enabled": true
 		}
 	]

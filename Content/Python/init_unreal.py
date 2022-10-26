@@ -32,7 +32,7 @@ def pip_install(packages):
 
 # Put here your required python packages
 # remember C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\Experimental\PythonFoundationPackages\Content\Python\Lib\Win64\site-packages
-required = {'Pillow == 9.2.0','einops == 0.4.1', 'omegaconf == 2.2.3'}
+required = {'Pillow == 9.2.0','einops == 0.4.1', 'omegaconf == 2.2.3', 'tqdm', 'scipy' }
 
 installed = {pkg.key for pkg in pkg_resources.working_set}
 missing = required - installed
