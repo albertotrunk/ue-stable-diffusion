@@ -2,6 +2,8 @@ import unreal
 import subprocess
 import pkg_resources
 from pathlib import Path
+import os, sys
+sys.path.append("C:/Program Files/Epic Games/UE_5.0/Engine/Plugins/Experimental/PythonFoundationPackages/Content/Python/Lib/Win64/site-packages")
 
 PYTHON_INTERPRETER_PATH = unreal.get_interpreter_executable_path()
 assert Path(PYTHON_INTERPRETER_PATH).exists(), f"Python not found at '{PYTHON_INTERPRETER_PATH}'"
@@ -24,6 +26,8 @@ def pip_install(packages):
         encoding = "utf-8"
     )
 
+    proc.wait()
+
     while proc.poll() is None:
         unreal.log(proc.stdout.readline().strip())
         unreal.log_warning(proc.stderr.readline().strip())
@@ -32,7 +36,7 @@ def pip_install(packages):
 
 # Put here your required python packages
 # remember C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\Experimental\PythonFoundationPackages\Content\Python\Lib\Win64\site-packages
-required = {'Pillow == 9.2.0','einops == 0.4.1', 'omegaconf == 2.2.3', 'tqdm', 'scipy' }
+required = {'omegaconf','einops','tqdm'}
 
 installed = {pkg.key for pkg in pkg_resources.working_set}
 missing = required - installed

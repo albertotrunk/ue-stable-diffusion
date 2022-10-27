@@ -13,15 +13,5 @@
 	"CanContainContent": true,
 	"IsBetaVersion": true,
 	"IsExperimentalVersion": true,
-	"Installed": false,
-	"Plugins": [
-		{
-			"Name": "PythonFoundationPackages",
-			"Enabled": true
-		},
-		{
-			"Name": "PythonScriptPlugin",
-			"Enabled": true
-		}
-	]
+	"Installed": false
 }
