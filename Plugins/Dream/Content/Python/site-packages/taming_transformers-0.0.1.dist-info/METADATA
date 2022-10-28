@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: taming-transformers
+Version: 0.0.1
+Summary: Taming Transformers for High-Resolution Image Synthesis
+Home-page: https://github.com/CompVis/taming-transformers
+Author: Patrick Esser, Robin Rombach, Bjorn Ommer
+Author-email: patrick.esser@iwr.uni-heidelberg.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: omegaconf (>=2.0.0)
+Requires-Dist: pytorch-lightning (>=1.0.8)
+
+UNKNOWN
+
+
