@@ -97,10 +97,9 @@ def load_img(path, h0, w0):
 
 
 config = f"{unreal.Paths.project_plugins_dir()}Dream/Content/Python/v1-inference.yaml"
-ckpt = f"{unreal.Paths.project_plugins_dir()}Dream/Content/Python/model/model.ckpt"
 outdir = unreal.Paths.screen_shot_dir()
 init_img = f"{unreal.Paths.screen_shot_dir()}dream.png"
-
+ckpt = f"{unreal.Paths.project_plugins_dir()}model/model.ckpt"
 parser = argparse.ArgumentParser()
 
 parser.add_argument(

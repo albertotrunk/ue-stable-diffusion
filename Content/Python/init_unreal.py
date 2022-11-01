@@ -3,6 +3,7 @@ import subprocess
 import pkg_resources
 from pathlib import Path
 import os, sys
+#TODO change the path to unreal api
 sys.path.append("C:/Program Files/Epic Games/UE_5.0/Engine/Plugins/Experimental/PythonFoundationPackages/Content/Python/Lib/Win64/site-packages")
 
 PYTHON_INTERPRETER_PATH = unreal.get_interpreter_executable_path()
@@ -36,7 +37,7 @@ def pip_install(packages):
 
 # Put here your required python packages
 # remember C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\Experimental\PythonFoundationPackages\Content\Python\Lib\Win64\site-packages
-required = {'omegaconf','einops','tqdm'}
+required = {'omegaconf','einops','tqdm','typing_extensions'}
 
 installed = {pkg.key for pkg in pkg_resources.working_set}
 missing = required - installed
