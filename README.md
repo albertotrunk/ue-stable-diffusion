@@ -1,7 +1,7 @@
 # ue-stable-diffusion
 UE5 dev plugin with stable diffusion integration
 Add your custom model to
-"plugins/Dream/models/model.ckpt"
+"\Plugins\Dream\Content\Python\modelmodel.ckpt"
 
 ![u5sd copy](https://user-images.githubusercontent.com/8300565/197598541-de332abd-9755-45e3-b5da-2fd4a647144e.jpg)
 
