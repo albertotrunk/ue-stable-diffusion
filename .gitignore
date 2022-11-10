@@ -80,6 +80,5 @@ DerivedDataCache/*
 
 
 #model
-Plugins/model
-*.ckpt
+
 
