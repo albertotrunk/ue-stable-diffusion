@@ -13,5 +13,11 @@
 	"CanContainContent": true,
 	"IsBetaVersion": true,
 	"IsExperimentalVersion": true,
-	"Installed": false
+	"Installed": false,
+	"Plugins": [
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		}
+	]
 }

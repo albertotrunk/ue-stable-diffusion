@@ -1,5 +1,5 @@
-#This is a version from stable diffusion optimized SD
-
+#This is a version from stable diffusion optimized SD https://github.com/basujindal/stable-diffusion/tree/main/optimizedSD
+#original repo https://github.com/basujindal/stable-diffusion
 import unreal
 unreal.log("Unreal Stable Diffusion - Let's dream!")
 
@@ -13,10 +13,10 @@ from tqdm import tqdm, trange
 from itertools import islice
 import time
 from pytorch_lightning import seed_everything
-#from torch import autocast
+from torch import autocast
 from contextlib import nullcontext
 from einops import rearrange, repeat
-from optimizedSD.ldm.util import instantiate_from_config
+from ldm.util import instantiate_from_config
 
 def split_weighted_subprompts(text):
     """
@@ -97,15 +97,16 @@ def load_img(path, h0, w0):
 
 
 config = f"{unreal.Paths.project_plugins_dir()}Dream/Content/Python/v1-inference.yaml"
+ckpt = f"{unreal.Paths.project_plugins_dir()}Dream/Content/Python/model/model.ckpt"
 outdir = unreal.Paths.screen_shot_dir()
 init_img = f"{unreal.Paths.screen_shot_dir()}dream.png"
-ckpt = f"{unreal.Paths.project_plugins_dir()}Dream/Content/Python/model/model.ckpt"
+
 parser = argparse.ArgumentParser()
 
 parser.add_argument(
-    "--prompt", type=str, nargs="?", default="concept art of an ancient roman temple, broken columns, digital art trending on artstation", help="the dream to render"
+    "--prompt", type=str, nargs="?", default="lions everywhere", help="the dream to render"
 )
-parser.add_argument("--ckpt", type=str, nargs="?", help="the model", default=ckpt)
+
 parser.add_argument("--outdir", type=str, nargs="?", help="dir to write results to", default=outdir)
 parser.add_argument("--init-img", type=str, nargs="?", help="path to the input image", default=init_img)
 
@@ -203,7 +204,7 @@ parser.add_argument(
     help="Reduces inference time on the expense of 1GB VRAM",
 )
 parser.add_argument(
-    "--precision", type=str, help="evaluate at this precision", choices=["full", "autocast"], default="full"
+    "--precision", type=str, help="evaluate at this precision", choices=["full", "autocast"], default="autocast"
 )
 parser.add_argument(
     "--format",
