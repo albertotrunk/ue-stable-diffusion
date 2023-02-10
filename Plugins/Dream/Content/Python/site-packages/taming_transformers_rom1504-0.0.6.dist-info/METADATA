@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: taming-transformers-rom1504
+Version: 0.0.6
+Summary: Taming Transformers for High-Resolution Image Synthesis
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: omegaconf (>=2.0.0)
+Requires-Dist: pytorch-lightning (>=1.0.8)
+
+UNKNOWN
+
+
