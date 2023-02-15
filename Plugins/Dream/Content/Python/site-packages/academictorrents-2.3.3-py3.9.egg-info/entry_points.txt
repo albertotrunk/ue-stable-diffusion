@@ -1,0 +1,3 @@
+[console_scripts]
+at-get = academictorrents:cli
+

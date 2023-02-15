@@ -1,0 +1,40 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+imgaug/DejaVuSans.ttf
+imgaug/__init__.py
+imgaug/imgaug.py
+imgaug/parameters-testcode.py
+imgaug/parameters.py
+imgaug/quokka.jpg
+imgaug.egg-info/PKG-INFO
+imgaug.egg-info/SOURCES.txt
+imgaug.egg-info/dependency_links.txt
+imgaug.egg-info/requires.txt
+imgaug.egg-info/top_level.txt
+imgaug/augmenters/__init__.py
+imgaug/augmenters/arithmetic (copy).py
+imgaug/augmenters/arithmetic.py
+imgaug/augmenters/blur (copy).py
+imgaug/augmenters/blur.py
+imgaug/augmenters/color (copy).py
+imgaug/augmenters/color.py
+imgaug/augmenters/convolutional (copy).py
+imgaug/augmenters/convolutional.py
+imgaug/augmenters/flip (copy).py
+imgaug/augmenters/flip.py
+imgaug/augmenters/geometric (copy).py
+imgaug/augmenters/geometric.py
+imgaug/augmenters/meta (copy).py
+imgaug/augmenters/meta.py
+imgaug/augmenters/overlay (copy).py
+imgaug/augmenters/overlay.py
+imgaug/augmenters/segmentation (copy).py
+imgaug/augmenters/segmentation.py
+imgaug/augmenters/segmentation_maps.py
+imgaug/augmenters/size (copy).py
+imgaug/augmenters/size.py
+imgaug/bak/affine.py
+imgaug/external/__init__.py
+imgaug/external/opensimplex.py

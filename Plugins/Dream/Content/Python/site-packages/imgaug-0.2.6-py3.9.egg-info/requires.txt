@@ -1,0 +1,4 @@
+scipy
+scikit-image>=0.11.0
+numpy>=1.7.0
+six
