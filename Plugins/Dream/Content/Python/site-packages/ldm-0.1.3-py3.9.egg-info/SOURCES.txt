@@ -1,8 +1,0 @@
-README.md
-ldm.py
-setup.cfg
-setup.py
-ldm.egg-info/PKG-INFO
-ldm.egg-info/SOURCES.txt
-ldm.egg-info/dependency_links.txt
-ldm.egg-info/top_level.txt
