@@ -1,8 +1,0 @@
-numpy>=1.11.1
-scipy
-imgaug<0.2.7,>=0.2.5
-PyYAML
-opencv-python-headless>=4.1.1
-
-[tests]
-pytest
